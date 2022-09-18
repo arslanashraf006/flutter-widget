@@ -44,7 +44,7 @@ class _BottomBarState extends State<BottomBar> {
               currentindex=index;
             });
           },
-          items: [
+          items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',

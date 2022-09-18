@@ -18,7 +18,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
       drawer: NavigationDrawerWidget(),
       //endDrawer: NavigationDrawerWidget(),
       appBar: AppBar(
-        title: Text('Navigation drawer & Sidebar Menu'),
+        title: const Text('Navigation drawer & Sidebar Menu'),
       ),
       body: Builder(
         builder: (context)=> Center(
@@ -26,7 +26,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
             Scaffold.of(context).openDrawer();
             // Scaffold.of(context).openEndDrawer();
           },
-          child: Text('Open Drawer'),),
+          child: const Text('Open Drawer'),),
         ),
       ),
     );
@@ -34,7 +34,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
 }
 
 class NavigationDrawerWidget extends StatelessWidget {
-final padding=EdgeInsets.symmetric(horizontal: 20.0);
+final padding=const EdgeInsets.symmetric(horizontal: 20.0);
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -43,31 +43,31 @@ final padding=EdgeInsets.symmetric(horizontal: 20.0);
         child: ListView(
           padding: padding,
           children: [
-            SizedBox(height: 40.0,),
+            const SizedBox(height: 40.0,),
             buildMenuItem(text: 'Profile', icon: Icons.person_pin,
             onClicked: (){
               selectedItem(context, 0);
             }),
-            SizedBox(height: 16.0,),
+            const SizedBox(height: 16.0,),
             buildMenuItem(text: 'Home', icon: Icons.home,
                 onClicked: (){
                   selectedItem(context, 1);
                 }),
-            SizedBox(height: 16.0,),
+            const SizedBox(height: 16.0,),
             buildMenuItem(text: 'Search', icon: Icons.search,
                 onClicked: (){
                   selectedItem(context, 2);
                 }),
-            SizedBox(height: 16.0,),
+            const SizedBox(height: 16.0,),
             buildMenuItem(text: 'History', icon: Icons.history,
                 onClicked: (){
                   selectedItem(context, 3);
                 }),
-            SizedBox(height: 24.0,),
-            Divider(color: Colors.white70,),
-            SizedBox(height: 24.0,),
+            const SizedBox(height: 24.0,),
+            const Divider(color: Colors.white70,),
+            const SizedBox(height: 24.0,),
             buildMenuItem(text: 'Plugins', icon: Icons.account_tree_outlined),
-            SizedBox(height: 16.0,),
+            const SizedBox(height: 16.0,),
             buildMenuItem(text: 'Notifications', icon: Icons.notifications_outlined),
           ],
         ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_widgets/screens/history.dart';
 import 'package:flutter_widgets/screens/home.dart';
 import 'package:flutter_widgets/screens/profile.dart';
@@ -19,10 +18,10 @@ class _TopAppBarState extends State<TopAppBar> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('AppBar'),
+          title: const Text('AppBar'),
           centerTitle: true,
           leading: IconButton(
-              icon: Icon(Icons.menu),
+              icon: const Icon(Icons.menu),
           onPressed: (){
                 print('Hello');
           },
@@ -31,25 +30,25 @@ class _TopAppBarState extends State<TopAppBar> {
             IconButton(onPressed: (){
 
             },
-              icon: Icon(Icons.notifications_none),
+              icon: const Icon(Icons.notifications_none),
             ),
             IconButton(onPressed: (){
 
             },
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
             ),
           ],
           //backgroundColor: Colors.orange,
           flexibleSpace: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                   colors: [Colors.purple,Colors.red],
               begin: Alignment.bottomRight,
                 end: Alignment.topLeft,
               ),
-            )
+            ),
           ),
-          bottom: TabBar(
+          bottom: const TabBar(
             //isScrollable: true,
             indicatorColor: Colors.white,
               indicatorWeight: 4.0,
@@ -70,7 +69,7 @@ class _TopAppBarState extends State<TopAppBar> {
           elevation: 20.0,
           titleSpacing: 0,
         ),
-        body: TabBarView(children: [
+        body: const TabBarView(children: [
           Home(),
           HistoryPage(),
           ProfilePage(),

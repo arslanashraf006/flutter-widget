@@ -7,29 +7,29 @@ final controller = ScrollController();
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(title: Text('GridView'),
+      appBar: AppBar(title: const Text('GridView'),
       actions: [
         IconButton(onPressed: (){
-          final value = 0.0;
+          const value = 0.0;
           controller.jumpTo(value);
-        }, icon: Icon(Icons.arrow_upward)),
+        }, icon: const Icon(Icons.arrow_upward)),
         IconButton(onPressed: (){
           final value = controller.position.maxScrollExtent;
           controller.jumpTo(value);
-        }, icon: Icon(Icons.arrow_downward)),
+        }, icon: const Icon(Icons.arrow_downward)),
       ],
       ),
       body: buildGridView(),
     );
   }
-  Widget buildGridView() => GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+  Widget buildGridView() => GridView.builder(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
     mainAxisSpacing: 2.0,
     crossAxisSpacing: 2.0,
     crossAxisCount: 2,
     //childAspectRatio: 1/3,
   ),
       controller: controller,
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       itemCount: numbers.length,
       itemBuilder: (context,index){
     final item = numbers[index];
@@ -42,7 +42,7 @@ final controller = ScrollController();
         child: Center(
       child: Text(number,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 25.0,
+        style: const TextStyle(fontSize: 25.0,
         fontWeight: FontWeight.bold),),
     ),
     footer: Text('Footer $number',textAlign: TextAlign.center,),

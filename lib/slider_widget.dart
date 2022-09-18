@@ -22,8 +22,8 @@ int height = 180;
             Text(height.toString()),
             SliderTheme(
               data: SliderTheme.of(context).copyWith(
-                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
+                thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 15.0),
+                overlayShape: const RoundSliderOverlayShape(overlayRadius: 30.0),
                 thumbColor: Colors.pinkAccent,
                 activeTrackColor: Colors.white,
                 overlayColor: Colors.pinkAccent.shade100,

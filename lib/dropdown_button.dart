@@ -15,12 +15,12 @@ class _DropDownMenuState extends State<DropDownMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DropDown Item'),
+        title: const Text('DropDown Item'),
       ),
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(16.0),
-          padding: EdgeInsets.symmetric(horizontal: 12.0,vertical: 4.0),
+          margin: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 12.0,vertical: 4.0),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.0),
             border: Border.all(color: Colors.black,width: 4.0),
@@ -28,7 +28,7 @@ class _DropDownMenuState extends State<DropDownMenu> {
           child: DropdownButtonHideUnderline(
             child: DropdownButton<String>(
               iconSize: 36,
-              icon: Icon(Icons.arrow_drop_down,color: Colors.black,),
+              icon: const Icon(Icons.arrow_drop_down,color: Colors.black,),
               isExpanded: true,
               value: value,
                 items: item.map(buildMenuItem).toList(),
@@ -46,9 +46,10 @@ class _DropDownMenuState extends State<DropDownMenu> {
   DropdownMenuItem<String> buildMenuItem(String item)=> DropdownMenuItem(
     value: item,
       child: Text(item,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 20.0,
         ),
-      ));
+      ),
+  );
 }

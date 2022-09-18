@@ -3,25 +3,25 @@ import 'package:flutter/material.dart';
 
 class Expansion extends StatelessWidget {
   const Expansion({Key? key}) : super(key: key);
-static final double radius = 20.0;
+static const double radius = 20.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expansion Tile'),
+        title: const Text('Expansion Tile'),
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Card(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
-            side: BorderSide(color: Colors.black,width: 2.0),
+            side: const BorderSide(color: Colors.black,width: 2.0),
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(radius),
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 children: [
                   buildImage(),
@@ -44,7 +44,7 @@ static final double radius = 20.0;
   Widget buildText(BuildContext context){
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-      child: ExpansionTile(
+      child: const ExpansionTile(
         childrenPadding: EdgeInsets.all(16.0),
         title: Text('Sarah Pepperstone',
         style: TextStyle(fontSize: 24.0,

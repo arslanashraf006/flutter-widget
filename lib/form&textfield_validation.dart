@@ -22,18 +22,18 @@ class _FormTextfieldValidationState extends State<FormTextfieldValidation> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(left: 40.0,right: 40.0),
+          padding: const EdgeInsets.only(left: 40.0,right: 40.0),
           child: Form(
             key: formkey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: height*0.04,),
-                  Text('Here to Get',style: TextStyle(fontSize: 30.0),),
-                  Text('Welcome !',style: TextStyle(fontSize: 30.0),),
+                  const Text('Here to Get',style: TextStyle(fontSize: 30.0),),
+                  const Text('Welcome !',style: TextStyle(fontSize: 30.0),),
                   SizedBox(height: height*0.05,),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Enter your name',
                     ),
                     validator: (value){
@@ -49,7 +49,7 @@ class _FormTextfieldValidationState extends State<FormTextfieldValidation> {
                   ),
                   SizedBox(height: height*0.05,),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Enter your number',
                     ),
                     validator: (value){
@@ -65,7 +65,7 @@ class _FormTextfieldValidationState extends State<FormTextfieldValidation> {
                   ),
                   SizedBox(height: height*0.05,),
                   TextFormField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Enter your email',
                     ),
                     validator: (value){
@@ -83,9 +83,9 @@ class _FormTextfieldValidationState extends State<FormTextfieldValidation> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Signup',style: TextStyle(fontSize: 22.0),),
+                      const Text('Signup',style: TextStyle(fontSize: 22.0),),
                       NeumorphicButton(
-                        margin: EdgeInsets.only(top: 12.0),
+                        margin: const EdgeInsets.only(top: 12.0),
                         onPressed: (){
                           if(formkey.currentState!.validate()){
                             //check ifform data are valid
